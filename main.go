@@ -30,6 +30,6 @@ func main() {
 
 	fmt.Println(j_string_map)
 
-	f := flattened.FlattenInts("", empty)
+	f := flattened.Flatten("", empty)
 	fmt.Println(f)
 }
