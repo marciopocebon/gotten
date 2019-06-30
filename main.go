@@ -10,7 +10,7 @@ import (
 func main() {
 	j_string_map := `
   {
-    "a": 5,
+    "a": 5.555,
     "b": 6,
     "c": {
       "f": 9,
@@ -30,6 +30,6 @@ func main() {
 
 	fmt.Println(j_string_map)
 
-	f := flattened.Flatten("", empty)
+	f := flattened.FlattenFloats("", empty)
 	fmt.Println(f)
 }
