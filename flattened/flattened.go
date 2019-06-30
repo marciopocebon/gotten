@@ -1,4 +1,4 @@
-// hehnope json flattener
+// hehnope json gotten
 // Copyright (C) 2019 hehnope
 //
 // slurp is free software: you can redistribute it and/or modify

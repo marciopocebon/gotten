@@ -1,4 +1,4 @@
-// hehnope json flattener
+// hehnope json gotten
 // Copyright (C) 2019 hehnope
 //
 // slurp is free software: you can redistribute it and/or modify
@@ -28,12 +28,18 @@ func main() {
 	j_string_map := `
   {
     "a": true,
-    "b": false,
+    "b": "22",
     "c": {
       "f": true,
       "g": {
-        "m": true,
+        "m": 1,
         "n": false
+      },
+      "aaa": {
+        "nest": 1,
+        "something": {
+          "verybig": true
+        }
       }
     }
   }
@@ -45,8 +51,9 @@ func main() {
 
 	fmt.Printf("empty: %+v\n", empty)
 
-	fmt.Println(j_string_map)
-
-	f := flattened.FlattenBools("", empty)
+	f := flattened.Flatten("", empty)
 	fmt.Println(f)
+
+	f_string, _ := json.Marshal(f)
+	fmt.Println(string(f_string))
 }
