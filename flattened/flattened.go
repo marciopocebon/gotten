@@ -4,6 +4,7 @@ import (
 	"fmt"
 )
 
+// Flatten will flatten any string:<type>
 func Flatten(prefix string, v map[string]interface{}) map[string]interface{} {
 	flattened := make(map[string]interface{})
 
@@ -67,7 +68,7 @@ func Flatten(prefix string, v map[string]interface{}) map[string]interface{} {
 	return flattened
 }
 
-// FlattenInts returns a map of string ints flattened
+// FlattenInts will flatten any string:<int>
 func FlattenInts(prefix string, v map[string]interface{}) map[string]int {
 	flattened := make(map[string]int)
 
@@ -107,6 +108,7 @@ func FlattenInts(prefix string, v map[string]interface{}) map[string]int {
 	return flattened
 }
 
+// FlattenFloats will flatten any string:<float64>
 func FlattenFloats(prefix string, v map[string]interface{}) map[string]float64 {
 	flattened := make(map[string]float64)
 
@@ -146,6 +148,7 @@ func FlattenFloats(prefix string, v map[string]interface{}) map[string]float64 {
 	return flattened
 }
 
+// FlattenStrings will flatten any string:<string>
 func FlattenStrings(prefix string, v map[string]interface{}) map[string]string {
 	flattened := make(map[string]string)
 
@@ -185,6 +188,7 @@ func FlattenStrings(prefix string, v map[string]interface{}) map[string]string {
 	return flattened
 }
 
+// FlattenBools will flatten any string:<bool>
 func FlattenBools(prefix string, v map[string]interface{}) map[string]bool {
 	flattened := make(map[string]bool)
 
