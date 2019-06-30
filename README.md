@@ -14,3 +14,39 @@ The following functions are a quick description on how to use:
 
 ### Usage
 See `main.go` for a complete example
+
+### Example
+Given:
+```json
+{
+  "a": true,
+  "b": "22",
+  "c": {
+    "f": true,
+    "g": {
+      "m": 1,
+      "n": false
+    },
+    "aaa": {
+      "nest": 1,
+      "something": {
+        "verybig": true
+      }
+    }
+  }
+}
+```
+
+`gotten` will return:
+
+```json
+{
+  "a": true,
+  "b": "22",
+  "c.aaa.nest": 1,
+  "c.aaa.something.verybig": true,
+  "c.f": true,
+  "c.g.m": 1,
+  "c.g.n": false
+}
+```
