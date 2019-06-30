@@ -10,13 +10,13 @@ import (
 func main() {
 	j_string_map := `
   {
-    "a": "5.555",
-    "b": "6",
+    "a": true,
+    "b": false,
     "c": {
-      "f": "9",
+      "f": true,
       "g": {
-        "m": "17",
-        "n": "3"
+        "m": true,
+        "n": false
       }
     }
   }
@@ -30,6 +30,6 @@ func main() {
 
 	fmt.Println(j_string_map)
 
-	f := flattened.FlattenStrings("", empty)
+	f := flattened.FlattenBools("", empty)
 	fmt.Println(f)
 }
