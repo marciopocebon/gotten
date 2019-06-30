@@ -3,6 +3,8 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+
+	"gotten/flattened"
 )
 
 func main() {
@@ -27,4 +29,7 @@ func main() {
 	fmt.Printf("empty: %+v\n", empty)
 
 	fmt.Println(j_string_map)
+
+	f := flattened.FlattenInts("", empty)
+	fmt.Println(f)
 }
